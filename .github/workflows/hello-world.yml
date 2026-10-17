@@ -1,0 +1,14 @@
+name: DevOps Hello World
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  hello-world:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Run Hello World
+        run: python3 hello.py
